@@ -5,10 +5,11 @@
 本站是赖嘉诚的个人站点：课程是树（免费课程体系）、博客是流（栏目文章）、作品是实体（项目主页）。
 
 ## 主要页面
-- [赖嘉诚 · 首页](https://laijiacheng.com/)：个人介绍、当前状态、课程大纲与最新动态
+- [赖嘉诚 · 首页](https://laijiacheng.com/)：个人介绍、当前状态、课程大纲、小应用与最新动态
 - [课程索引](https://laijiacheng.com/courses.html)：3 篇折叠树；全部录播免费，每讲配"每课一胜"
 - [全部文章](https://laijiacheng.com/blog.html)：所有已发布文章
 - [实战作品集](https://laijiacheng.com/projects.html)：OPC 大航海、I+1 Quest
+- [小应用](https://laijiacheng.com/apps.html)：OPC.EXE
 - [关于](https://laijiacheng.com/about.html)：仪表盘、成就时间线与联系方式
 - [宝贝](https://laijiacheng.com/resources.html)：免费资料与资源下载
 - [福利](https://laijiacheng.com/welfare.html)：邀请码与专属福利
@@ -23,8 +24,20 @@
 - [健康](https://laijiacheng.com/col-health.html)：如何经营生活：状态、精力与日常系统
 - [实战](https://laijiacheng.com/col-live.html)：直播实录：借助各种工具，按照认知和生活体系去打造
 
+## 小应用（Games & Apps，可直接游玩）
+- [OPC.EXE](https://laijiacheng.com/OPC.EXE/)：像素风一人公司经营模拟——把「做产品 → 换回钱」玩成一局游戏。（kind: game）
+
 ## 最新文章
 - [有限责任公司设立基本流程](https://laijiacheng.com/post-post-8.html)：一共7步（2026-08-05）
 - [四大经营主体](https://laijiacheng.com/post-post-7.html)：介绍用来赚钱的“壳”是什么样的（2026-08-05）
 - [I+1Quest介绍](https://laijiacheng.com/post-post-6.html)：一款智能匹配你英语水平的无限剧情RPG（2026-08-02）
 - [开篇 | 我叫赖嘉诚，我决定造一艘船](https://laijiacheng.com/post-post-5.html)：第一篇博客。说清楚我是谁、这个网站是干嘛的、我为什么要做这件事。（2026-08-02）
+
+## English
+All main pages have an English mirror under /en/ (interface in English; articles not yet translated fall back to Chinese with a notice).
+- [Home (EN)](https://laijiacheng.com/en/)：Profile, course outline, apps, latest posts
+- [Courses (EN)](https://laijiacheng.com/en/courses.html)：The free AI-era course system
+- [Blog (EN)](https://laijiacheng.com/en/blog.html)：All posts
+- [Portfolio (EN)](https://laijiacheng.com/en/projects.html)：Hands-on projects
+- [Apps (EN)](https://laijiacheng.com/en/apps.html)：Playable games & tools
+- [About (EN)](https://laijiacheng.com/en/about.html)：Dashboard, milestones & contact

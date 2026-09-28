@@ -229,6 +229,44 @@ footer .about{font-size:13px;color:var(--ljc-neutral-500);max-width:280px}
 .mod-inner{overflow:hidden;padding:0 16px}
 .tree-mod.open .mod-inner{padding:2px 16px 12px}
 .mod-intro{font-size:12px;color:var(--ljc-neutral-400);margin:4px 0 6px!important}
+/* ---- 小应用：首页滚动推荐区 + 专属页网格 + 弹层即玩（T035） ---- */
+.lang-toggle{font-family:var(--font-display);font-weight:600;letter-spacing:.04em}
+.app-card{background:var(--ljc-neutral-0);border:1px solid var(--ljc-neutral-200);border-radius:var(--ljc-radius-l);overflow:hidden;display:flex;flex-direction:column;transition:transform .15s ease,box-shadow .15s ease}
+.app-card:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(240,165,184,.15)}
+.app-cover{position:relative;aspect-ratio:16/9;background:linear-gradient(135deg,var(--ljc-pink-100),var(--ljc-blue-100));display:flex;align-items:center;justify-content:center;color:var(--ljc-pink-600)}
+.app-cover[data-app]{cursor:pointer}
+.app-cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.app-badge{position:absolute;top:10px;right:10px;z-index:2;background:var(--ljc-pink-500);color:#fff;font-size:11px;padding:2px 10px;border-radius:var(--ljc-radius-full)}
+.app-body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:7px;flex:1}
+.app-body h3{margin:0;font-size:15px;color:var(--ljc-neutral-800)}
+.app-body h3 a{color:inherit}
+.app-body p{margin:0;font-size:12.5px;color:var(--ljc-neutral-500);flex:1}
+.app-actions{display:flex;gap:10px;align-items:center;margin-top:2px}
+.app-play{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border-radius:var(--ljc-radius-full);background:var(--ljc-pink-500);border:1px solid var(--ljc-pink-500);color:#fff;font:inherit;font-size:12.5px;cursor:pointer;transition:background .15s ease}
+.app-play:hover{background:var(--ljc-pink-400)}
+.app-ext{font-size:12px;color:var(--ljc-neutral-400)}
+.app-ext:hover{color:var(--ljc-pink-600)}
+.apps-wrap{position:relative}
+.apps-scroll{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 4px 16px;scrollbar-width:thin}
+.apps-scroll .app-card{flex:0 0 272px;scroll-snap-align:start}
+.apps-arrow{position:absolute;top:34%;z-index:5;width:34px;height:34px;border-radius:50%;border:1px solid var(--ljc-neutral-200);background:var(--ljc-neutral-0);color:var(--ljc-neutral-500);cursor:pointer;font-size:15px;line-height:1;box-shadow:0 3px 10px rgba(40,38,58,.08);transition:all .15s ease}
+.apps-arrow:hover{color:var(--ljc-pink-600);border-color:var(--ljc-pink-300)}
+.apps-arrow.prev{left:-12px}
+.apps-arrow.next{right:-12px}
+.apps-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
+.app-modal{position:fixed;inset:0;z-index:100;display:none}
+.app-modal.on{display:block}
+.app-modal-mask{position:absolute;inset:0;background:rgba(40,38,58,.55);backdrop-filter:blur(4px)}
+.app-modal-box{position:relative;max-width:1020px;margin:3vh auto 0;background:var(--ljc-neutral-0);border-radius:var(--ljc-radius-l);overflow:hidden;display:flex;flex-direction:column;height:94vh;box-shadow:0 20px 60px rgba(40,38,58,.35)}
+.app-modal-head{display:flex;align-items:center;gap:14px;padding:10px 16px;border-bottom:1px solid var(--ljc-neutral-200)}
+.app-modal-head .am-title{flex:1;font-size:14.5px;color:var(--ljc-neutral-800)}
+.app-modal-head .am-open{font-size:12.5px;white-space:nowrap}
+.app-modal-head .am-close{border:1px solid var(--ljc-neutral-200);background:var(--ljc-neutral-0);color:var(--ljc-neutral-500);border-radius:var(--ljc-radius-full);padding:5px 14px;font:inherit;font-size:12.5px;cursor:pointer}
+.app-modal-head .am-close:hover{color:var(--ljc-pink-600);border-color:var(--ljc-pink-300)}
+.app-modal-box iframe{flex:1;border:0;width:100%;background:#1a1926}
+/* ---- 双语提示条（暂无英文回退 / AI 转译声明） ---- */
+.lang-note{background:var(--ljc-warning-soft);border:1px solid var(--ljc-warning);border-radius:var(--ljc-radius-m);padding:10px 16px;font-size:13px;color:var(--ljc-neutral-600);margin:0 0 20px}
+.ai-note{border-top:1px dashed var(--ljc-neutral-200);margin-top:30px;padding-top:12px;font-size:12.5px;color:var(--ljc-neutral-400)}
 
 @media(max-width:760px){
   .nav{overflow-x:hidden}
@@ -272,24 +310,35 @@ footer .about{font-size:13px;color:var(--ljc-neutral-500);max-width:280px}
   @media(max-width:460px){.entries{grid-template-columns:1fr}}
   .card{padding:16px}
   .qr-img{width:120px;height:120px}
+  .apps-scroll{gap:12px;padding-bottom:12px}
+  .apps-scroll .app-card{flex:0 0 76vw}
+  .apps-arrow{display:none}
+  .apps-grid{grid-template-columns:1fr}
+  .app-modal-box{margin:0;height:100vh;border-radius:0;max-width:100vw}
+  .app-modal-head{padding:12px 14px;gap:10px}
+  .app-modal-head .am-close{padding:8px 16px}
 }
 @media(max-width:460px){
   .entries{grid-template-columns:1fr}
 }
 </style>
 <link rel="canonical" href="https://laijiacheng.com/">
+<link rel="alternate" hreflang="zh-CN" href="https://laijiacheng.com/">
+<link rel="alternate" hreflang="en" href="https://laijiacheng.com/en/">
+<link rel="alternate" hreflang="x-default" href="https://laijiacheng.com/">
 <meta property="og:site_name" content="赖嘉诚 · OPC 大航海家">
 <meta property="og:type" content="website">
 <meta property="og:title" content="首页 · 赖嘉诚">
 <meta property="og:description" content="大一学生 / 独立开发者 / 一人公司探索者。用 AI 探索独立开发的无限可能。">
 <meta property="og:url" content="https://laijiacheng.com/">
 <meta property="og:locale" content="zh_CN">
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","name":"赖嘉诚 · OPC 大航海家","url":"https://laijiacheng.com/","inLanguage":"zh-CN","description":"大一学生 / 独立开发者 / 一人公司探索者。用 AI 探索独立开发的无限可能。"},{"@type":"Person","name":"赖嘉诚","alternateName":"OPC 大航海家","description":"大一学生 / 独立开发者 / 一人公司探索者。用 AI 探索独立开发的无限可能。","url":"https://laijiacheng.com/about.html","email":"shufu123@foxmail.com","knowsAbout":["赖嘉诚","OPC 大航海家","一人公司","独立开发者","独立开发","AI 课程","AI 工具","AI 造物","AI 编程","个人品牌","副业变现","自由职业","终身学习","纳瓦尔宝典","流量营销","内容创作","自媒体运营","AI 时代生活方式","个人成长","英语学习 RPG"]}]}</script>
+<meta property="og:locale:alternate" content="en_US">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","name":"赖嘉诚 · OPC 大航海家","url":"https://laijiacheng.com/","inLanguage":"zh-CN","description":"大一学生 / 独立开发者 / 一人公司探索者。用 AI 探索独立开发的无限可能。"},{"@type":"Person","@id":"#person","name":"赖嘉诚","alternateName":"OPC 大航海家","description":"大一学生 / 独立开发者 / 一人公司探索者。用 AI 探索独立开发的无限可能。","url":"https://laijiacheng.com/about.html","email":"shufu123@foxmail.com","knowsLanguage":["zh-CN","en"],"knowsAbout":["赖嘉诚","OPC 大航海家","一人公司","独立开发者","独立开发","AI 课程","AI 工具","AI 造物","AI 编程","个人品牌","副业变现","自由职业","终身学习","纳瓦尔宝典","流量营销","内容创作","自媒体运营","AI 时代生活方式","个人成长","英语学习 RPG"]},{"@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"VideoGame","name":"OPC.EXE","url":"https://laijiacheng.com/OPC.EXE/","applicationCategory":"Game","operatingSystem":"Web Browser","description":"像素风一人公司经营模拟——把「做产品 → 换回钱」玩成一局游戏。","author":{"@type":"Person","name":"赖嘉诚"}}}]}]}</script>
 </head>
 <body>
 <nav class="nav"><div class="nav-in">
   <a class="brand" href="index.html"><span class="dot"></span>赖嘉诚<small>OPC 大航海家</small></a>
-  <div class="nav-links"><a href="index.html" class="on">首页</a><a href="courses.html">课程</a><a href="col-snowball.html">日记</a><a href="resources.html">宝贝</a><a href="welfare.html">福利</a><a href="projects.html">作品集</a><a href="about.html">关于</a></div>
+  <div class="nav-links"><a href="index.html" class="on">首页</a><a href="courses.html">课程</a><a href="col-snowball.html">日记</a><a href="resources.html">宝贝</a><a href="welfare.html">福利</a><a href="apps.html">小应用</a><a href="projects.html">作品集</a><a href="about.html">关于</a><a class="lang-toggle" href="en/index.html" hreflang="en" aria-label="switch language">EN</a></div>
 </div></nav>
 <main>
 <section class="hero"><div class="wrap">
@@ -355,7 +404,7 @@ footer .about{font-size:13px;color:var(--ljc-neutral-500);max-width:280px}
 <section class="block"><div class="wrap">
   <div class="sec-head"><h2>仪表盘</h2><a href="about.html">关于 →</a></div>
   <div class="stats">
-    <div class="stat"><div class="n">56</div><div class="l">持续更新天数</div></div>
+    <div class="stat"><div class="n">58</div><div class="l">持续更新天数</div></div>
     <div class="stat"><div class="n">0<span style="font-size:14px;color:var(--ljc-neutral-400)">/66</span></div><div class="l">已上线讲数</div></div>
     <div class="stat"><div class="n">4</div><div class="l">发布文章</div></div>
     <div class="stat"><div class="n">2</div><div class="l">实战作品</div></div>
@@ -381,7 +430,66 @@ footer .about{font-size:13px;color:var(--ljc-neutral-500);max-width:280px}
       <span class="chip blue">进行中</span>
       <span class="chip gray">AI 应用</span></div>
     <p>AI 互动故事生成式英语学习软件</p></div>
+</div></section><section class="block" style="padding-top:8px"><div class="wrap">
+  <div class="sec-head"><h2>小游戏 · 小应用</h2><a href="apps.html">全部 →</a></div>
+  <div class="apps-wrap">
+    <button class="apps-arrow prev" type="button" aria-label="scroll left">←</button>
+    <div class="apps-scroll"><div class="app-card" data-k="game" id="app-opc-exe" data-title="OPC.EXE" data-url="https://laijiacheng.com/OPC.EXE/" data-embed="https://laijiacheng.com/OPC.EXE/">
+  <div class="app-cover" data-app="opc-exe" role="button" tabindex="0" aria-label="OPC.EXE"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-3px"><path d="M6 12h4"/><path d="M8 10v4"/><path d="M15 11h.01"/><path d="M18 13h.01"/><path d="M17.32 5H6.68a4 4 0 0 0-3.98 3.59c-.25 2.01-.51 4.3-.62 5.89-.09 1.31.62 2.52 1.95 2.52 1.02 0 1.66-.62 2.31-1.42L8 14h8l1.66 1.58c.65.8 1.29 1.42 2.31 1.42 1.33 0 2.04-1.21 1.95-2.52-.11-1.59-.37-3.88-.62-5.89A4 4 0 0 0 17.32 5z"/></svg><span class="app-badge">NEW</span></div>
+  <div class="app-body">
+    <h3><a href="https://laijiacheng.com/OPC.EXE/" target="_blank" rel="noopener">OPC.EXE</a></h3>
+    <p>像素风一人公司经营模拟——把「做产品 → 换回钱」玩成一局游戏。</p>
+    <div class="app-actions"><button class="app-play" type="button" data-app="opc-exe">▶ 即玩</button><a class="app-ext" href="https://laijiacheng.com/OPC.EXE/" target="_blank" rel="noopener">新窗口打开 ↗</a></div>
+  </div>
+</div></div>
+    <button class="apps-arrow next" type="button" aria-label="scroll right">→</button>
+  </div>
 </div></section>
+<script>
+(function(){
+  var w=document.querySelector('.apps-wrap'); if(!w) return
+  var s=w.querySelector('.apps-scroll')
+  var p=w.querySelector('.apps-arrow.prev'), n=w.querySelector('.apps-arrow.next')
+  if(p) p.addEventListener('click',function(){ s.scrollBy({left:-300,behavior:'smooth'}) })
+  if(n) n.addEventListener('click',function(){ s.scrollBy({left:300,behavior:'smooth'}) })
+})()
+</script>
+<div class="app-modal" id="app-modal" aria-hidden="true">
+  <div class="app-modal-mask"></div>
+  <div class="app-modal-box" role="dialog" aria-modal="true">
+    <div class="app-modal-head">
+      <b class="am-title"></b>
+      <a class="am-open" href="#" target="_blank" rel="noopener">新窗口打开 ↗</a>
+      <button class="am-close" type="button">✕ 关闭</button>
+    </div>
+    <iframe title="app-frame" loading="lazy"></iframe>
+  </div>
+</div>
+<script>
+(function(){
+  var modal=document.getElementById('app-modal'); if(!modal) return
+  var frame=modal.querySelector('iframe'), title=modal.querySelector('.am-title'), open=modal.querySelector('.am-open')
+  function openApp(card){
+    if(!card) return
+    title.textContent=card.dataset.title||''
+    open.href=card.dataset.url||'#'
+    frame.src=card.dataset.embed||card.dataset.url||''
+    modal.classList.add('on')
+    document.body.style.overflow='hidden'
+  }
+  function closeApp(){
+    modal.classList.remove('on')
+    frame.src='about:blank'
+    document.body.style.overflow=''
+  }
+  document.addEventListener('click',function(e){
+    var b=e.target.closest('[data-app]')
+    if(b){ e.preventDefault(); openApp(document.getElementById('app-'+b.dataset.app)); return }
+    if(e.target.closest('.am-close')||e.target.classList.contains('app-modal-mask')) closeApp()
+  })
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape') closeApp() })
+})()
+</script>
 <section class="block" style="padding-top:8px"><div class="wrap">
   <div class="sec-head"><h2>最新动态</h2><a href="blog.html">全部文章 →</a></div>
   <div class="card"><h3><a href="post-post-8.html">有限责任公司设立基本流程</a></h3>
@@ -402,7 +510,7 @@ footer .about{font-size:13px;color:var(--ljc-neutral-500);max-width:280px}
     <a class="brand" href="index.html" style="margin-bottom:10px"><span class="dot"></span>赖嘉诚<small>OPC 大航海家</small></a>
     <p class="about">大一学生 / 独立开发者 / 一人公司探索者。用 AI 探索独立开发的无限可能。</p>
   </div>
-  <div><h6>导航</h6><div class="foot-nav"><a href="index.html">首页</a><a href="courses.html">课程</a><a href="col-snowball.html">日记</a><a href="resources.html">宝贝</a><a href="welfare.html">福利</a><a href="projects.html">作品集</a><a href="about.html">关于</a></div></div>
+  <div><h6>导航</h6><div class="foot-nav"><a href="index.html">首页</a><a href="courses.html">课程</a><a href="col-snowball.html">日记</a><a href="resources.html">宝贝</a><a href="welfare.html">福利</a><a href="apps.html">小应用</a><a href="projects.html">作品集</a><a href="about.html">关于</a></div></div>
   <div><h6>找到我</h6><a href="https://www.zhihu.com/people/snowballrolling" target="_blank" rel="noopener">知乎 @赖嘉诚</a><a href="https://space.bilibili.com/3546374631065783" target="_blank" rel="noopener">B站 @赖嘉诚</a><a href="https://www.douyin.com/user/MS4wLjABAAAA0WPNrPdcxloRp6H__iNWYVtkHg31FwnjhuBf21GG8fnXuly0s8r2INzgBamlcVDd" target="_blank" rel="noopener">抖音 @赖嘉诚</a><a href="https://www.xiaohongshu.com/user/profile/6a03dda30000000001007001" target="_blank" rel="noopener">小红书 @赖嘉诚</a><a href="https://github.com/snowball-diary" target="_blank" rel="noopener">GitHub @LaiJiaCheng</a><div class="foot-qr"><img src="assets/WECHAT.jpeg" width="430" height="430" loading="lazy" decoding="async" alt="赖嘉诚OPC二维码"><span class="t">赖嘉诚OPC<br>扫码关注 · 更新不错过</span></div></div>
 </div>
 <div class="copyright">© 2026 赖嘉诚 · OPC 大航海家</div>
