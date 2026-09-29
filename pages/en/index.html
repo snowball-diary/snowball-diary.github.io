@@ -98,6 +98,9 @@ article.doc h1{font-size:28px;line-height:1.4;margin:8px 0 10px;color:var(--ljc-
 .doc-body pre code{background:none;color:inherit;padding:0}
 .doc-body blockquote{margin:0 0 16px;padding:10px 18px;border-left:3px solid var(--ljc-pink-300);background:var(--ljc-pink-50);border-radius:0 var(--ljc-radius-m) var(--ljc-radius-m) 0;color:var(--ljc-neutral-600)}
 .doc-body img{max-width:100%;border-radius:var(--ljc-radius-m)}
+.doc-body picture{display:block;margin:0 0 16px}
+.doc-cover{margin:4px 0 20px}
+.doc-cover img,.doc-cover picture img{width:100%;height:auto;border-radius:var(--ljc-radius-m);border:1px solid var(--ljc-neutral-200)}
 .doc-body table{border-collapse:collapse;width:100%;margin:0 0 16px;font-size:14px}
 .doc-body th,.doc-body td{border:1px solid var(--ljc-neutral-200);padding:8px 12px;text-align:left}
 .doc-body th{background:var(--ljc-neutral-100)}
@@ -435,7 +438,11 @@ footer .about{font-size:13px;color:var(--ljc-neutral-500);max-width:280px}
   <div class="apps-wrap">
     <button class="apps-arrow prev" type="button" aria-label="scroll left">←</button>
     <div class="apps-scroll"><div class="app-card" data-k="game" id="app-opc-exe" data-title="OPC.EXE" data-url="https://laijiacheng.com/OPC.EXE/" data-embed="https://laijiacheng.com/OPC.EXE/">
-  <div class="app-cover" data-app="opc-exe" role="button" tabindex="0" aria-label="OPC.EXE"><img src="../assets/app-opc-exe.png" alt="OPC.EXE" loading="lazy" decoding="async"><span class="app-badge">NEW</span></div>
+  <div class="app-cover" data-app="opc-exe" role="button" tabindex="0" aria-label="OPC.EXE"><picture>
+  <source type="image/avif" srcset="../assets/img/2026/app-opc-exe-4c54dd-480.avif 480w, ../assets/img/2026/app-opc-exe-4c54dd-960.avif 960w" sizes="(max-width:760px) 100vw, 712px">
+  <source type="image/webp" srcset="../assets/img/2026/app-opc-exe-4c54dd-480.webp 480w, ../assets/img/2026/app-opc-exe-4c54dd-960.webp 960w" sizes="(max-width:760px) 100vw, 712px">
+  <img src="../assets/img/2026/app-opc-exe-4c54dd-960.webp" width="960" height="540" alt="OPC.EXE" loading="lazy" decoding="async">
+</picture><span class="app-badge">NEW</span></div>
   <div class="app-body">
     <h3><a href="https://laijiacheng.com/OPC.EXE/" target="_blank" rel="noopener">OPC.EXE</a></h3>
     <p>A pixel-art one-person-company tycoon — play &quot;make something, get paid&quot; as a game.</p>
@@ -496,11 +503,11 @@ footer .about{font-size:13px;color:var(--ljc-neutral-500);max-width:280px}
     <div class="meta">Mindset · 2026-09-29</div>
     <p>The start of a free course: with AI this powerful, where does human value lie; what this c…</p></div><div class="card"><h3><a href="post-post-8.html">Basic Process for Setting Up a Limited Liability Company</a></h3>
     <div class="meta">Legal &amp; Tax · 2026-08-05</div>
-    <p>7 steps in total</p></div><div class="card"><h3><a href="post-post-7.html">The Four Business Entities</a></h3>
+    <p></p></div><div class="card"><h3><a href="post-post-7.html">The Four Business Entities</a></h3>
     <div class="meta">Legal &amp; Tax · 2026-08-05</div>
-    <p>A look at what the &quot;shell&quot; you use to make money actually is</p></div><div class="card"><h3><a href="post-post-6.html">Introducing I+1Quest</a></h3>
+    <p></p></div><div class="card"><h3><a href="post-post-6.html">Introducing I+1Quest</a></h3>
     <div class="meta">Diary · 2026-08-02</div>
-    <p>An endlessstory RPG that intelligently matches your English level</p></div>
+    <p></p></div>
 </div></section><section class="seo-note"><h2>About this site (summary)</h2>
     <p>Lai Jiacheng (full brand name: OPC Navigator · Independent Creator) is a college student and independent developer using AI to explore the complete path of the one-person company: learning, making, expression, business, and life. This site is his open building-in-public space and the official home of the AI-Era Lifestyle Course System — all 66 recorded lessons are free. The Mindset Part covers the cognition and mindset for the AI era; the Craft Part covers AI fundamentals plus four special topics — making, expression, everyday living, and business; the Live Part is a 12-week live season that guides learners in building their own personal operating system. Every lesson comes with a &#39;One Win per Lesson&#39; win condition.</p><p></p><p>The site also includes: the Snowball Diary (the shipbuilding-in-public process and first-hand retrospectives), a portfolio of hands-on projects (OPC Grand Voyage; I+1 Quest, an AI interactive-story English-learning RPG — each with open-source repos and live demos), Goodies (free resources and template downloads), and Perks (official invite codes for MiMo, Zhipu (BigModel), Trae, and more). Updates are synced to his WeChat Official Account &#39;赖嘉诚OPC&#39; — feel free to start exploring from any page.</p>
     <p>Topics: Lai Jiacheng, OPC Voyage, one-person company, indie developer, independent development, AI course, AI tools, AI making, AI coding, personal brand, side-project monetization, freelancing, lifelong learning, Naval Ravikant, growth marketing, content creation, social media, AI-era lifestyle, personal growth, English-learning RPG.</p>
@@ -511,7 +518,11 @@ footer .about{font-size:13px;color:var(--ljc-neutral-500);max-width:280px}
     <p class="about">College freshman / independent developer / One-Person Company Explorer. Using AI to explore the endless possibilities of independent development.</p>
   </div>
   <div><h6>Navigate</h6><div class="foot-nav"><a href="index.html">Home</a><a href="courses.html">Courses</a><a href="col-snowball.html">Diary</a><a href="resources.html">Goodies</a><a href="welfare.html">Perks</a><a href="apps.html">Apps</a><a href="projects.html">Projects</a><a href="about.html">About</a></div></div>
-  <div><h6>Find me</h6><a href="https://www.zhihu.com/people/snowballrolling" target="_blank" rel="noopener">Zhihu @赖嘉诚</a><a href="https://space.bilibili.com/3546374631065783" target="_blank" rel="noopener">Bilibili @赖嘉诚</a><a href="https://www.douyin.com/user/MS4wLjABAAAA0WPNrPdcxloRp6H__iNWYVtkHg31FwnjhuBf21GG8fnXuly0s8r2INzgBamlcVDd" target="_blank" rel="noopener">Douyin (TikTok CN) @赖嘉诚</a><a href="https://www.xiaohongshu.com/user/profile/6a03dda30000000001007001" target="_blank" rel="noopener">RED (Xiaohongshu) @赖嘉诚</a><a href="https://github.com/snowball-diary" target="_blank" rel="noopener">GitHub @LaiJiaCheng</a><div class="foot-qr"><img src="../assets/WECHAT.jpeg" width="430" height="430" loading="lazy" decoding="async" alt="赖嘉诚OPC二维码"><span class="t">赖嘉诚OPC<br>Scan to follow · never miss an update</span></div></div>
+  <div><h6>Find me</h6><a href="https://www.zhihu.com/people/snowballrolling" target="_blank" rel="noopener">Zhihu @赖嘉诚</a><a href="https://space.bilibili.com/3546374631065783" target="_blank" rel="noopener">Bilibili @赖嘉诚</a><a href="https://www.douyin.com/user/MS4wLjABAAAA0WPNrPdcxloRp6H__iNWYVtkHg31FwnjhuBf21GG8fnXuly0s8r2INzgBamlcVDd" target="_blank" rel="noopener">Douyin (TikTok CN) @赖嘉诚</a><a href="https://www.xiaohongshu.com/user/profile/6a03dda30000000001007001" target="_blank" rel="noopener">RED (Xiaohongshu) @赖嘉诚</a><a href="https://github.com/snowball-diary" target="_blank" rel="noopener">GitHub @LaiJiaCheng</a><div class="foot-qr"><picture>
+  <source type="image/avif" srcset="../assets/img/2026/wechat-qr-7c2fe7-430.avif 430w" sizes="92px">
+  <source type="image/webp" srcset="../assets/img/2026/wechat-qr-7c2fe7-430.webp 430w" sizes="92px">
+  <img src="../assets/img/2026/wechat-qr-7c2fe7-430.webp" width="430" height="430" alt="赖嘉诚OPC二维码" loading="lazy" decoding="async">
+</picture><span class="t">赖嘉诚OPC<br>Scan to follow · never miss an update</span></div></div>
 </div>
 <div class="copyright">© 2026 Lai Jiacheng · OPC Voyage</div>
 </div></footer>
