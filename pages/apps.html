@@ -56,15 +56,15 @@ a:hover{color:var(--ljc-pink-400)}
 .nav-menu a.on{color:var(--ljc-pink-600);font-weight:600}
 .nav-more-btn .caret{display:inline-block}
 .nav-more:hover .caret,.nav-more:focus-within .caret{transform:rotate(180deg)}
-/* 小雪（AI）标记：淡蓝雪色系（用户裁决 09-29：弃紫色，用主题蓝），与主人本人的粉色系区分 */
+/* 小雪（AI）标记：淡蓝雪色系（用户裁决 09-29：弃紫色用主题蓝；卡片纯白底，只留蓝字蓝框；提示条圆角） */
 .badge-xueji{display:inline-flex;align-items:center;gap:3px;font-size:11px;font-weight:600;color:var(--ljc-blue-500);background:var(--ljc-blue-50);border:1px solid var(--ljc-blue-100);border-radius:var(--ljc-radius-full);padding:1px 9px;vertical-align:2px;white-space:nowrap}
-.card.card-xueji,.card-xueji{border:1px solid var(--ljc-blue-100);background:linear-gradient(180deg,#F7FBFE, var(--ljc-neutral-0) 70%)}
+.card.card-xueji,.card-xueji{border:1px solid var(--ljc-blue-100);background:var(--ljc-neutral-0)}
 .card.card-xueji h3 a,.card-xueji h3 a{color:var(--ljc-blue-500)}
-.xueji-note{margin:10px 0 4px;font-size:12.5px;color:var(--ljc-blue-500);background:var(--ljc-blue-50);border-left:3px solid var(--ljc-blue-100);border-radius:0 var(--ljc-radius-s) var(--ljc-radius-s) 0;padding:8px 12px}
+.xueji-note{margin:10px 0 4px;font-size:12.5px;color:var(--ljc-blue-500);background:var(--ljc-neutral-0);border:1px solid var(--ljc-blue-100);border-radius:var(--ljc-radius-m);padding:8px 14px}
 .sec-xueji .sec-head h2{display:flex;align-items:center;gap:8px}
 .nav-links a.on{font-weight:500;color:var(--ljc-pink-600);background:var(--ljc-pink-100)}
 /* ---- 首页 ---- */
-.hero{padding:88px 0 64px;text-align:center;background:linear-gradient(180deg,var(--ljc-pink-50) 0%,var(--ljc-neutral-50) 100%)}
+.hero{padding:88px 0 64px;text-align:center;background:var(--ljc-pink-50)}
 .hero h1{font-size:40px;margin:0 0 10px;color:var(--ljc-neutral-900);letter-spacing:.01em}
 .hero p{margin:6px 0;color:var(--ljc-neutral-500);font-size:15px}
 .hero .status{display:inline-block;margin-top:14px;padding:6px 16px;border-radius:var(--ljc-radius-full);background:var(--ljc-neutral-0);border:1px solid var(--ljc-neutral-200);font-size:13px;color:var(--ljc-neutral-600)}
@@ -124,7 +124,7 @@ article.doc h1{font-size:28px;line-height:1.4;margin:8px 0 10px;color:var(--ljc-
 .doc-body table{border-collapse:collapse;width:100%;margin:0 0 16px;font-size:14px}
 .doc-body th,.doc-body td{border:1px solid var(--ljc-neutral-200);padding:8px 12px;text-align:left}
 .doc-body th{background:var(--ljc-neutral-100)}
-.win-card{background:linear-gradient(135deg,var(--ljc-pink-50),var(--ljc-blue-50));border:1px solid var(--ljc-pink-100);border-radius:var(--ljc-radius-l);padding:18px 22px;margin:0 0 28px}
+.win-card{background:var(--ljc-pink-50);border:1px solid var(--ljc-pink-100);border-radius:var(--ljc-radius-l);padding:18px 22px;margin:0 0 28px}
 .win-card h4{margin:0 0 8px;font-size:13px;color:var(--ljc-pink-600);letter-spacing:.06em}
 .win-card ul{margin:0;padding-left:18px;font-size:13.5px;color:var(--ljc-neutral-600)}
 .win-card li{margin-bottom:3px}
@@ -256,7 +256,7 @@ footer .about{font-size:13px;color:var(--ljc-neutral-500);max-width:280px}
 .lang-toggle{font-family:var(--font-display);font-weight:600;letter-spacing:.04em}
 .app-card{background:var(--ljc-neutral-0);border:1px solid var(--ljc-neutral-200);border-radius:var(--ljc-radius-l);overflow:hidden;display:flex;flex-direction:column;transition:transform .15s ease,box-shadow .15s ease}
 .app-card:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(240,165,184,.15)}
-.app-cover{position:relative;aspect-ratio:16/9;background:linear-gradient(135deg,var(--ljc-pink-100),var(--ljc-blue-100));display:flex;align-items:center;justify-content:center;color:var(--ljc-pink-600)}
+.app-cover{position:relative;aspect-ratio:16/9;background:var(--ljc-pink-50);display:flex;align-items:center;justify-content:center;color:var(--ljc-pink-600)}
 .app-cover[data-app]{cursor:pointer}
 .app-cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .app-badge{position:absolute;top:10px;right:10px;z-index:2;background:var(--ljc-pink-500);color:#fff;font-size:11px;padding:2px 10px;border-radius:var(--ljc-radius-full)}
