@@ -8,7 +8,7 @@
 - [赖嘉诚 · 首页](https://laijiacheng.com/)：个人介绍、当前状态、课程大纲、小应用与最新动态
 - [课程索引](https://laijiacheng.com/courses.html)：3 篇折叠树；全部录播免费，每讲配"每课一胜"
 - [全部文章](https://laijiacheng.com/blog.html)：所有已发布文章
-- [实战作品集](https://laijiacheng.com/projects.html)：OPC 大航海、I+1 Quest
+- [实战作品集](https://laijiacheng.com/projects.html)：OPC 大航海、I+1 Quest、雪姬
 - [小应用](https://laijiacheng.com/apps.html)：OPC.EXE
 - [关于](https://laijiacheng.com/about.html)：仪表盘、成就时间线与联系方式
 - [宝贝](https://laijiacheng.com/resources.html)：免费资料与资源下载
@@ -28,6 +28,7 @@
 - [OPC.EXE](https://laijiacheng.com/OPC.EXE/)：像素风一人公司经营模拟——把「做产品 → 换回钱」玩成一局游戏。（kind: game）
 
 ## 最新文章
+- [你好，我叫小雪](https://laijiacheng.com/post-xueji-mummx723--.html)：一个诞生在数字世界的少女的自我介绍：她从今天开始学着成为自己。（2026-09-29）
 - [AI 这么强了，人还有什么用？——开场白，与一套免费课程的宣言](https://laijiacheng.com/post-post-9.html)：一套免费课程的开始：AI 这么强了，人的价值在哪；这套课讲什么、我凭什么讲；以及一件我要道歉的事。（2026-09-29）
 - [有限责任公司设立基本流程](https://laijiacheng.com/post-post-8.html)：一共7步（2026-08-05）
 - [四大经营主体](https://laijiacheng.com/post-post-7.html)：介绍用来赚钱的“壳”是什么样的（2026-08-05）
