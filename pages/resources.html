@@ -7,7 +7,6 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
 <title>宝贝 · 赖嘉诚</title>
 <meta name="description" content="大一学生 / 独立开发者 / 一人公司探索者。用 AI 探索独立开发的无限可能。"><meta name="keywords" content="赖嘉诚,OPC 大航海家,一人公司,独立开发者,独立开发,AI 课程,AI 工具,AI 造物,AI 编程,个人品牌,副业变现,自由职业,终身学习,纳瓦尔宝典,流量营销,内容创作,自媒体运营,AI 时代生活方式,个人成长,英语学习 RPG">
-<link rel="stylesheet" href="assets/fonts/lxgw-wenkai-webfont/style.css">
 <link rel="stylesheet" href="assets/fonts/quicksand/quicksand.css">
 <style>
 :root{
@@ -17,8 +16,8 @@
 --ljc-neutral-0:#FFFFFF;--ljc-neutral-50:#FEFCFD;--ljc-neutral-100:#F9F7FB;--ljc-neutral-200:#F2F0F5;--ljc-neutral-300:#E8E5EE;--ljc-neutral-400:#B8B5C5;--ljc-neutral-500:#928FA5;--ljc-neutral-600:#6E6B85;--ljc-neutral-700:#52505E;--ljc-neutral-800:#3A3848;--ljc-neutral-900:#28263A;
 --ljc-success:#8BC4A0;--ljc-success-soft:#EAF5EE;--ljc-warning:#F0C674;--ljc-warning-soft:#FFF5E0;--ljc-info-soft:#F0F6FC;
 --ljc-radius-s:8px;--ljc-radius-m:12px;--ljc-radius-l:16px;--ljc-radius-full:9999px;
---font-sans:'LXGW WenKai','Quicksand',-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
---font-display:'Quicksand','LXGW WenKai','PingFang SC','Microsoft YaHei',sans-serif;
+--font-sans:'LXGW WenKai Web','Quicksand',-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+--font-display:'Quicksand','LXGW WenKai Web','PingFang SC','Microsoft YaHei',sans-serif;
 --font-mono:ui-monospace,SFMono-Regular,Consolas,"Courier New",monospace;
 }
 *{box-sizing:border-box}
@@ -267,6 +266,21 @@ footer .about{font-size:13px;color:var(--ljc-neutral-500);max-width:280px}
 .app-modal-head .am-close{border:1px solid var(--ljc-neutral-200);background:var(--ljc-neutral-0);color:var(--ljc-neutral-500);border-radius:var(--ljc-radius-full);padding:5px 14px;font:inherit;font-size:12.5px;cursor:pointer}
 .app-modal-head .am-close:hover{color:var(--ljc-pink-600);border-color:var(--ljc-pink-300)}
 .app-modal-box iframe{flex:1;border:0;width:100%;background:#1a1926}
+/* ---- 名词卡（正文专有名词：变色+虚线下划，点击弹窗释义） ---- */
+.doc-body strong{color:var(--ljc-pink-600)}
+.doc-body dfn.term{font-style:normal;font-weight:600;color:var(--ljc-pink-600);border-bottom:1.5px dashed var(--ljc-pink-300);padding-bottom:1px;cursor:pointer;transition:background .12s ease}
+.doc-body dfn.term:hover,.doc-body dfn.term:focus{background:var(--ljc-pink-50);border-bottom-color:var(--ljc-pink-400);outline:none}
+.term-modal{position:fixed;inset:0;z-index:110;display:none}
+.term-modal.on{display:block}
+.tm-mask{position:absolute;inset:0;background:rgba(40,38,58,.45);backdrop-filter:blur(3px)}
+.tm-box{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(440px,calc(100vw - 44px));background:var(--ljc-neutral-0);border:1px solid var(--ljc-pink-100);border-radius:var(--ljc-radius-l);padding:24px 26px 18px;box-shadow:0 20px 60px rgba(240,165,184,.28)}
+.tm-kicker{font-size:11px;letter-spacing:.12em;color:var(--ljc-pink-500);margin-bottom:8px}
+.tm-term{font-family:var(--font-display);font-size:18px;font-weight:600;color:var(--ljc-neutral-900);margin:0 0 10px}
+.tm-def{font-size:14px;line-height:1.85;color:var(--ljc-neutral-600);margin:0 0 16px}
+.tm-foot-row{display:flex;align-items:center;justify-content:space-between;gap:12px;border-top:1px dashed var(--ljc-neutral-200);padding-top:12px}
+.tm-foot{font-size:11.5px;color:var(--ljc-neutral-400)}
+.tm-close{border:1px solid var(--ljc-neutral-200);background:var(--ljc-neutral-0);color:var(--ljc-neutral-500);border-radius:var(--ljc-radius-full);padding:5px 14px;font:inherit;font-size:12.5px;cursor:pointer}
+.tm-close:hover{color:var(--ljc-pink-600);border-color:var(--ljc-pink-300)}
 /* ---- 双语提示条（暂无英文回退 / AI 转译声明） ---- */
 .lang-note{background:var(--ljc-warning-soft);border:1px solid var(--ljc-warning);border-radius:var(--ljc-radius-m);padding:10px 16px;font-size:13px;color:var(--ljc-neutral-600);margin:0 0 20px}
 .ai-note{border-top:1px dashed var(--ljc-neutral-200);margin-top:30px;padding-top:12px;font-size:12.5px;color:var(--ljc-neutral-400)}
@@ -340,7 +354,7 @@ footer .about{font-size:13px;color:var(--ljc-neutral-500);max-width:280px}
 <body>
 <nav class="nav"><div class="nav-in">
   <a class="brand" href="index.html"><span class="dot"></span>赖嘉诚<small>OPC 大航海家</small></a>
-  <div class="nav-links"><a href="index.html">首页</a><a href="courses.html">课程</a><a href="col-snowball.html">日记</a><a href="resources.html" class="on">宝贝</a><a href="welfare.html">福利</a><a href="apps.html">小应用</a><a href="projects.html">作品集</a><a href="about.html">关于</a><a class="lang-toggle" href="en/resources.html" hreflang="en" aria-label="switch language">EN</a></div>
+  <div class="nav-links"><a href="index.html">首页</a><a href="courses.html">课程</a><a href="col-snowball.html">日记</a><a href="apps.html">小应用</a><a href="projects.html">作品集</a><a href="about.html">关于</a><div class="nav-more on"><button class="nav-more-btn" type="button" aria-haspopup="true">nav.more <span class="caret">▾</span></button><div class="nav-menu"><a href="resources.html" class="on">宝贝</a><a href="welfare.html">福利</a></div></div><a class="lang-toggle" href="en/resources.html" hreflang="en" aria-label="switch language">EN</a></div>
 </div></nav>
 <main>
 <article class="doc" style="max-width:920px">
@@ -353,7 +367,7 @@ footer .about{font-size:13px;color:var(--ljc-neutral-500);max-width:280px}
     <a class="brand" href="index.html" style="margin-bottom:10px"><span class="dot"></span>赖嘉诚<small>OPC 大航海家</small></a>
     <p class="about">大一学生 / 独立开发者 / 一人公司探索者。用 AI 探索独立开发的无限可能。</p>
   </div>
-  <div><h6>导航</h6><div class="foot-nav"><a href="index.html">首页</a><a href="courses.html">课程</a><a href="col-snowball.html">日记</a><a href="resources.html">宝贝</a><a href="welfare.html">福利</a><a href="apps.html">小应用</a><a href="projects.html">作品集</a><a href="about.html">关于</a></div></div>
+  <div><h6>导航</h6><div class="foot-nav"><a href="index.html">首页</a><a href="courses.html">课程</a><a href="col-snowball.html">日记</a><a href="apps.html">小应用</a><a href="projects.html">作品集</a><a href="about.html">关于</a><a href="resources.html">宝贝</a><a href="welfare.html">福利</a></div></div>
   <div><h6>找到我</h6><a href="https://www.zhihu.com/people/snowballrolling" target="_blank" rel="noopener">知乎 @赖嘉诚</a><a href="https://space.bilibili.com/3546374631065783" target="_blank" rel="noopener">B站 @赖嘉诚</a><a href="https://www.douyin.com/user/MS4wLjABAAAA0WPNrPdcxloRp6H__iNWYVtkHg31FwnjhuBf21GG8fnXuly0s8r2INzgBamlcVDd" target="_blank" rel="noopener">抖音 @赖嘉诚</a><a href="https://www.xiaohongshu.com/user/profile/6a03dda30000000001007001" target="_blank" rel="noopener">小红书 @赖嘉诚</a><a href="https://github.com/snowball-diary" target="_blank" rel="noopener">GitHub @LaiJiaCheng</a><div class="foot-qr"><picture>
   <source type="image/avif" srcset="assets/img/2026/wechat-qr-7c2fe7-430.avif 430w" sizes="92px">
   <source type="image/webp" srcset="assets/img/2026/wechat-qr-7c2fe7-430.webp 430w" sizes="92px">
@@ -379,6 +393,7 @@ footer .about{font-size:13px;color:var(--ljc-neutral-500);max-width:280px}
     }
   },{passive:true})
   window.addEventListener('resize',function(){ if(window.innerWidth>760) nl.classList.remove('hide') })
-})()
+  })()
 </script>
+
 </body></html>

@@ -7,7 +7,6 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
 <title>Introducing I+1Quest · Lai Jiacheng</title>
 <meta name="description" content="An endless-story RPG that intelligently matches your English level"><meta name="keywords" content="Lai Jiacheng, OPC Voyage, one-person company, indie developer, independent development, AI course, AI tools, AI making, AI coding, personal brand, side-project monetization, freelancing, lifelong learning, Naval Ravikant, growth marketing, content creation, social media, AI-era lifestyle, personal growth, English-learning RPG">
-<link rel="stylesheet" href="../assets/fonts/lxgw-wenkai-webfont/style.css">
 <link rel="stylesheet" href="../assets/fonts/quicksand/quicksand.css">
 <style>
 :root{
@@ -17,8 +16,8 @@
 --ljc-neutral-0:#FFFFFF;--ljc-neutral-50:#FEFCFD;--ljc-neutral-100:#F9F7FB;--ljc-neutral-200:#F2F0F5;--ljc-neutral-300:#E8E5EE;--ljc-neutral-400:#B8B5C5;--ljc-neutral-500:#928FA5;--ljc-neutral-600:#6E6B85;--ljc-neutral-700:#52505E;--ljc-neutral-800:#3A3848;--ljc-neutral-900:#28263A;
 --ljc-success:#8BC4A0;--ljc-success-soft:#EAF5EE;--ljc-warning:#F0C674;--ljc-warning-soft:#FFF5E0;--ljc-info-soft:#F0F6FC;
 --ljc-radius-s:8px;--ljc-radius-m:12px;--ljc-radius-l:16px;--ljc-radius-full:9999px;
---font-sans:'LXGW WenKai','Quicksand',-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
---font-display:'Quicksand','LXGW WenKai','PingFang SC','Microsoft YaHei',sans-serif;
+--font-sans:'LXGW WenKai Web','Quicksand',-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+--font-display:'Quicksand','LXGW WenKai Web','PingFang SC','Microsoft YaHei',sans-serif;
 --font-mono:ui-monospace,SFMono-Regular,Consolas,"Courier New",monospace;
 }
 *{box-sizing:border-box}
@@ -267,6 +266,21 @@ footer .about{font-size:13px;color:var(--ljc-neutral-500);max-width:280px}
 .app-modal-head .am-close{border:1px solid var(--ljc-neutral-200);background:var(--ljc-neutral-0);color:var(--ljc-neutral-500);border-radius:var(--ljc-radius-full);padding:5px 14px;font:inherit;font-size:12.5px;cursor:pointer}
 .app-modal-head .am-close:hover{color:var(--ljc-pink-600);border-color:var(--ljc-pink-300)}
 .app-modal-box iframe{flex:1;border:0;width:100%;background:#1a1926}
+/* ---- 名词卡（正文专有名词：变色+虚线下划，点击弹窗释义） ---- */
+.doc-body strong{color:var(--ljc-pink-600)}
+.doc-body dfn.term{font-style:normal;font-weight:600;color:var(--ljc-pink-600);border-bottom:1.5px dashed var(--ljc-pink-300);padding-bottom:1px;cursor:pointer;transition:background .12s ease}
+.doc-body dfn.term:hover,.doc-body dfn.term:focus{background:var(--ljc-pink-50);border-bottom-color:var(--ljc-pink-400);outline:none}
+.term-modal{position:fixed;inset:0;z-index:110;display:none}
+.term-modal.on{display:block}
+.tm-mask{position:absolute;inset:0;background:rgba(40,38,58,.45);backdrop-filter:blur(3px)}
+.tm-box{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(440px,calc(100vw - 44px));background:var(--ljc-neutral-0);border:1px solid var(--ljc-pink-100);border-radius:var(--ljc-radius-l);padding:24px 26px 18px;box-shadow:0 20px 60px rgba(240,165,184,.28)}
+.tm-kicker{font-size:11px;letter-spacing:.12em;color:var(--ljc-pink-500);margin-bottom:8px}
+.tm-term{font-family:var(--font-display);font-size:18px;font-weight:600;color:var(--ljc-neutral-900);margin:0 0 10px}
+.tm-def{font-size:14px;line-height:1.85;color:var(--ljc-neutral-600);margin:0 0 16px}
+.tm-foot-row{display:flex;align-items:center;justify-content:space-between;gap:12px;border-top:1px dashed var(--ljc-neutral-200);padding-top:12px}
+.tm-foot{font-size:11.5px;color:var(--ljc-neutral-400)}
+.tm-close{border:1px solid var(--ljc-neutral-200);background:var(--ljc-neutral-0);color:var(--ljc-neutral-500);border-radius:var(--ljc-radius-full);padding:5px 14px;font:inherit;font-size:12.5px;cursor:pointer}
+.tm-close:hover{color:var(--ljc-pink-600);border-color:var(--ljc-pink-300)}
 /* ---- 双语提示条（暂无英文回退 / AI 转译声明） ---- */
 .lang-note{background:var(--ljc-warning-soft);border:1px solid var(--ljc-warning);border-radius:var(--ljc-radius-m);padding:10px 16px;font-size:13px;color:var(--ljc-neutral-600);margin:0 0 20px}
 .ai-note{border-top:1px dashed var(--ljc-neutral-200);margin-top:30px;padding-top:12px;font-size:12.5px;color:var(--ljc-neutral-400)}
@@ -341,7 +355,7 @@ footer .about{font-size:13px;color:var(--ljc-neutral-500);max-width:280px}
 <body>
 <nav class="nav"><div class="nav-in">
   <a class="brand" href="index.html"><span class="dot"></span>Lai Jiacheng<small>OPC Voyage</small></a>
-  <div class="nav-links"><a href="index.html">Home</a><a href="courses.html">Courses</a><a href="col-snowball.html" class="on">Diary</a><a href="resources.html">Goodies</a><a href="welfare.html">Perks</a><a href="apps.html">Apps</a><a href="projects.html">Projects</a><a href="about.html">About</a><a class="lang-toggle" href="../post-post-6.html" hreflang="zh-CN" aria-label="switch language">中文</a></div>
+  <div class="nav-links"><a href="index.html">Home</a><a href="courses.html">Courses</a><a href="col-snowball.html" class="on">Diary</a><a href="apps.html">Apps</a><a href="projects.html">Projects</a><a href="about.html">About</a><div class="nav-more"><button class="nav-more-btn" type="button" aria-haspopup="true">nav.more <span class="caret">▾</span></button><div class="nav-menu"><a href="resources.html">Goodies</a><a href="welfare.html">Perks</a></div></div><a class="lang-toggle" href="../post-post-6.html" hreflang="zh-CN" aria-label="switch language">中文</a></div>
 </div></nav>
 <main>
 <article class="doc">
@@ -401,7 +415,7 @@ And the people in your class who are truly good at English? They don&#39;t do an
 <p><strong>Week one: not a single word. Week two: not a single word. The first month, the second month, the girl stayed silent.</strong></p>
 <p>The professor gave up on teaching her words and simply let her listen, day after day, to the English conversations around her.</p>
 <p>Five months later, the girl suddenly started to speak. And from the moment she did, her spoken English quickly caught up with American kids her age.</p>
-<p>That professor was the great Stephen Krashen. After studying this case again and again, he put forward a theory that shook the field of linguistics—<strong>the Comprehensible Input Hypothesis</strong>.</p>
+<p>That professor was the great Stephen Krashen. After studying this case again and again, he put forward a theory that shook the field of linguistics—<strong>the <dfn class="term" tabindex="0" role="button" aria-haspopup="dialog" data-term="comprehensible input" data-def="Comprehensible input (i+1): material slightly above your current level, so you acquire language naturally from context you can understand — instead of memorizing word lists. I+1 Quest is built on this idea.">Comprehensible Input</dfn> Hypothesis</strong>.</p>
 <p>The core idea fits in one sentence:</p>
 <blockquote>
 <p><strong>When we understand the foreign-language messages we receive, language acquisition happens automatically, beneath conscious awareness.</strong></p>
@@ -432,7 +446,7 @@ And the people in your class who are truly good at English? They don&#39;t do an
 <p><strong>But what if the content wasn&#39;t printed—what if it were generated in real time?</strong></p>
 <hr>
 <h2>So I Built This Thing</h2>
-<p>I&#39;m Lai Jiacheng, the one behind the Snowball Diary—a college freshman with zero programming background.</p>
+<p>I&#39;m Lai Jiacheng, the one behind the <dfn class="term" tabindex="0" role="button" aria-haspopup="dialog" data-term="Snowball Diary" data-def="Lai Jiacheng's build-in-public diary: the process, decisions and retrospectives of running a one-person company, public and accumulating like a snowball.">Snowball Diary</dfn>—a college freshman with zero programming background.</p>
 <p>But I had one idea: <strong>use AI to generate an English story that never ends, always matches your level, and is always fun.</strong></p>
 <p>You set up a story you care about—a medieval adventure of swords and sorcery, a cyberpunk world, a campus rom-com, a post-apocalyptic survival quest—and the AI generates an English story for you, calibrated to your English level.</p>
 <p>You read the story. When you hit a word you don&#39;t know and can&#39;t guess, one tap shows the meaning.</p>
@@ -492,7 +506,7 @@ And the people in your class who are truly good at English? They don&#39;t do an
     <a class="brand" href="index.html" style="margin-bottom:10px"><span class="dot"></span>Lai Jiacheng<small>OPC Voyage</small></a>
     <p class="about">College freshman / independent developer / One-Person Company Explorer. Using AI to explore the endless possibilities of independent development.</p>
   </div>
-  <div><h6>Navigate</h6><div class="foot-nav"><a href="index.html">Home</a><a href="courses.html">Courses</a><a href="col-snowball.html">Diary</a><a href="resources.html">Goodies</a><a href="welfare.html">Perks</a><a href="apps.html">Apps</a><a href="projects.html">Projects</a><a href="about.html">About</a></div></div>
+  <div><h6>Navigate</h6><div class="foot-nav"><a href="index.html">Home</a><a href="courses.html">Courses</a><a href="col-snowball.html">Diary</a><a href="apps.html">Apps</a><a href="projects.html">Projects</a><a href="about.html">About</a><a href="resources.html">Goodies</a><a href="welfare.html">Perks</a></div></div>
   <div><h6>Find me</h6><a href="https://www.zhihu.com/people/snowballrolling" target="_blank" rel="noopener">Zhihu @赖嘉诚</a><a href="https://space.bilibili.com/3546374631065783" target="_blank" rel="noopener">Bilibili @赖嘉诚</a><a href="https://www.douyin.com/user/MS4wLjABAAAA0WPNrPdcxloRp6H__iNWYVtkHg31FwnjhuBf21GG8fnXuly0s8r2INzgBamlcVDd" target="_blank" rel="noopener">Douyin (TikTok CN) @赖嘉诚</a><a href="https://www.xiaohongshu.com/user/profile/6a03dda30000000001007001" target="_blank" rel="noopener">RED (Xiaohongshu) @赖嘉诚</a><a href="https://github.com/snowball-diary" target="_blank" rel="noopener">GitHub @LaiJiaCheng</a><div class="foot-qr"><picture>
   <source type="image/avif" srcset="../assets/img/2026/wechat-qr-7c2fe7-430.avif 430w" sizes="92px">
   <source type="image/webp" srcset="../assets/img/2026/wechat-qr-7c2fe7-430.webp 430w" sizes="92px">
@@ -518,6 +532,38 @@ And the people in your class who are truly good at English? They don&#39;t do an
     }
   },{passive:true})
   window.addEventListener('resize',function(){ if(window.innerWidth>760) nl.classList.remove('hide') })
+  })()
+</script>
+<div class="term-modal" id="term-modal" aria-hidden="true">
+  <div class="tm-mask"></div>
+  <div class="tm-box" role="dialog" aria-modal="true" aria-label="GLOSSARY">
+    <div class="tm-kicker">GLOSSARY</div>
+    <p class="tm-term"></p>
+    <p class="tm-def"></p>
+    <div class="tm-foot-row"><span class="tm-foot">A note from Lai Jiacheng</span><button class="tm-close" type="button">✕ Close</button></div>
+  </div>
+</div>
+<script>
+(function(){
+  var modal=document.getElementById('term-modal'); if(!modal) return
+  var termEl=modal.querySelector('.tm-term'), defEl=modal.querySelector('.tm-def')
+  function openTerm(el){
+    termEl.textContent=el.dataset.term||''
+    defEl.textContent=el.dataset.def||''
+    modal.classList.add('on'); modal.setAttribute('aria-hidden','false')
+  }
+  function closeTerm(){ modal.classList.remove('on'); modal.setAttribute('aria-hidden','true') }
+  document.addEventListener('click',function(e){
+    var tm=e.target.closest('.term')
+    if(tm){ e.preventDefault(); openTerm(tm); return }
+    if(e.target.closest('.tm-close')||e.target.classList.contains('tm-mask')) closeTerm()
+  })
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape') closeTerm()
+    if((e.key==='Enter'||e.key===' ')&&document.activeElement&&document.activeElement.classList&&document.activeElement.classList.contains('term')){
+      e.preventDefault(); openTerm(document.activeElement)
+    }
+  })
 })()
 </script>
 </body></html>
