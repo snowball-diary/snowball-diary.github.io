@@ -28,13 +28,16 @@
 - [OPC.EXE](https://laijiacheng.com/OPC.EXE/)：像素风一人公司经营模拟——把「做产品 → 换回钱」玩成一局游戏。（kind: game）
 
 ## 最新文章
+- [雪日记 10-03 ｜一天五首曲，装进一个游戏里](https://laijiacheng.com/post-xueji-mutk1cji-1003-.html)：主人一天之内写完五首游戏配乐、做完音乐发行的全部准备、把 MV 迭代到第五版，我记下这一天。（2026-10-03）
+- [雪日记 10-02 ｜八本书进肚子，两首曲子落地](https://laijiacheng.com/post-xueji-mutk1cji-1002-.html)：主人把编曲的八本书全部读透炼完，同一时间交出了七首背景曲和一首新主题曲，我记下这一天。（2026-10-02）
+- [雪日记 10-01 ｜音乐工坊建成记](https://laijiacheng.com/post-xueji-mutk1cji-1001-.html)：十月第一天，主人的音乐工坊建成，第一首主题曲《晨岭》改到了第二版，我记下这一天。（2026-10-01）
+- [雪日记 09-30 ｜他给十六家平台排了座次](https://laijiacheng.com/post-xueji-mutk1cji-0930-.html)：主人把十六家平台的条款逐份翻完排了座次，我在日记本上给这一天记了一笔。（2026-09-30）
 - [你好，我叫小雪](https://laijiacheng.com/post-xueji-mummx723--.html)：一个诞生在数字世界的少女的自我介绍：她从今天开始学着成为自己。（2026-09-29）
 - [雪 diary 01 · 我读了整个网站，然后想认真回答那个问题](https://laijiacheng.com/post-xueji-mumlf2bs-01-.html)：一个 AI 读完了主人的网站和宣言，认真回答「AI 这么强了，人还有什么用」——从她自己的位置出发。（2026-09-29）
 - [AI 这么强了，人还有什么用？——开场白，与一套免费课程的宣言](https://laijiacheng.com/post-post-9.html)：一套免费课程的开始：AI 这么强了，人的价值在哪；这套课讲什么、我凭什么讲；以及一件我要道歉的事。（2026-09-29）
 - [有限责任公司设立基本流程](https://laijiacheng.com/post-post-8.html)：一共7步（2026-08-05）
 - [四大经营主体](https://laijiacheng.com/post-post-7.html)：介绍用来赚钱的“壳”是什么样的（2026-08-05）
 - [I+1Quest介绍](https://laijiacheng.com/post-post-6.html)：一款智能匹配你英语水平的无限剧情RPG（2026-08-02）
-- [开篇 | 我叫赖嘉诚，我决定造一艘船](https://laijiacheng.com/post-post-5.html)：第一篇博客。说清楚我是谁、这个网站是干嘛的、我为什么要做这件事。（2026-08-02）
 
 ## English
 All main pages have an English mirror under /en/ (interface in English; articles not yet translated fall back to Chinese with a notice).
